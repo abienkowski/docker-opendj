@@ -9,7 +9,7 @@ docker run -d \
     -v opendj-logs:/opt/opendj/logs \
     -v opendj-backup:/opt/opendj/bak \
     -v opendj-config:/opt/opendj/config \
-    abienkowski/docker-opendj:2.6.2
+    abienkowski/docker-opendj
 
 ### Optionally expose the ports to the host if needed
 
@@ -19,7 +19,7 @@ docker run -d \
     -v opendj-logs:/opt/opendj/logs \
     -v opendj-backup:/opt/opendj/bak \
     -v opendj-config:/opt/opendj/config \
-    abienkowski/docker-opendj:2.6.2
+    abienkowski/docker-opendj
 
 ## Initialize service with base configuration consider running the command bellow from a configuration mangement tools consider the following options
 # 
@@ -29,7 +29,7 @@ docker run --rm -it \
     -v opendj-backup:/opt/opendj/bak \
     -v opendj-config:/opt/opendj/config \
     --entrypoint /bin/sh \
-    abienkowski/docker-opendj:2.6.2 \
+    abienkowski/docker-opendj \
     /opt/opendj/opendj/setup --cli \
         --hostname $SERVICE_FQDN \
         --ldapPort $LDAP_PORT \
